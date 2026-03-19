@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<title>Login</title>
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Arial, sans-serif;
+  color: #fff;
+
+  /* 🌌 YOUR IMAGE */
+  background-image: url("https://starparty.com/wp-content/uploads/2014/09/andromeda-galaxy.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* DARK OVERLAY FOR READABILITY */
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 0;
+}
+
+/* TEXT HEADER */
+.main-title {
+  position: relative;
+  z-index: 1;
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  position: relative;
+  z-index: 1;
+  font-size: 15px;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #ddd;
+}
+
+/* LOGIN BOX */
+.box {
+  position: relative;
+  z-index: 1;
+  background: rgba(250, 247, 247, 0.084);
+  backdrop-filter: blur(14px);
+  padding: 35px;
+  border-radius: 18px;
+  width: 320px;
+  text-align: center;
+}
+
+/* INPUT */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  background: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* LINK */
+a {
+  color: #fff;
+}
+</style>
+
+</head>
+
+<body>
+
+
+
+
+<div class="box">
+  <h2>Login</h2>
+
+  <form method="POST">
+    <input name="username" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
+    <button>Enter</button>
+  </form>
+
+  <p style="color:red;">{{ message }}</p>
+
+  <a href="/signup">Create Account</a>
+</div>
+
+</body>
+</html>
